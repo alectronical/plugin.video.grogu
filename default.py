@@ -99,7 +99,7 @@ if action == None:
     run = control.setting('first.info')
     if run == '': run = 'true' #clean install scenerio
     if cache._find_cache_version(): run = 'true'  #check whether script.module.exdodus has been updated
-    if cache._find_cache_versionAlt(): run = 'true' #check whether plugin.video.exdodus has been updated.  Added function to script.module.exdodus/lib/resources/modules/cache - def _find_cache_versionAlt()
+    if cache._find_cache_versionAlt(): run = 'true' #check whether plugin.video.grogu has been updated.  Added function to script.module.exdodus/lib/resources/modules/cache - def _find_cache_versionAlt()
     if run == 'true':
         navigator.navigator().news()
         control.setSetting(id='first.info', value='false')
