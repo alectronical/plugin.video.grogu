@@ -20,7 +20,7 @@ from resources.lib.modules import log_utils
 from resources.lib.modules import control
 import threading
 
-addon_settings = xbmc.translatePath('special://userdata/addon_data/plugin.video.exodusredux/settings.xml')
+addon_settings = xbmc.translatePath('special://userdata/addon_data/plugin.video.grogu/settings.xml')
 
 control.execute('RunPlugin(plugin://%s)' % control.get_plugin_url({'action': 'service'}))
 
@@ -34,13 +34,13 @@ if run2 == 'true':
 
 def syncTraktLibrary():
     control.execute(
-        'RunPlugin(plugin://%s)' % 'plugin.video.exodusredux/?action=tvshowsToLibrarySilent&url=traktcollection')
+        'RunPlugin(plugin://%s)' % 'plugin.video.grogu/?action=tvshowsToLibrarySilent&url=traktcollection')
     control.execute(
-        'RunPlugin(plugin://%s)' % 'plugin.video.exodusredux/?action=moviesToLibrarySilent&url=traktcollection')
+        'RunPlugin(plugin://%s)' % 'plugin.video.grogu/?action=moviesToLibrarySilent&url=traktcollection')
 
 try:
     ModuleVersion = control.addon('script.module.exodusredux').getAddonInfo('version')
-    AddonVersion = control.addon('plugin.video.exodusredux').getAddonInfo('version')
+    AddonVersion = control.addon('plugin.video.grogu').getAddonInfo('version')
 
     log_utils.log('######################### EXODUS REDUX ############################', log_utils.LOGNOTICE)
     log_utils.log('####### CURRENT EXODUS REDUX VERSIONS REPORT ######################', log_utils.LOGNOTICE)
